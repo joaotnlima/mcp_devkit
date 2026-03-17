@@ -22,9 +22,9 @@
   <meta name="twitter:description" content="Open-source CLI and cloud platform to test, inspect, and monitor MCP servers. Catch bugs before production." />
   <meta name="twitter:image" content="https://mcpdevkit.dev/og-image.png" />
 
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.svg" />
+  <link rel="stylesheet" href="./style.css" />
 
   <!-- JSON-LD: SoftwareApplication -->
   <script type="application/ld+json">
@@ -119,14 +119,15 @@
   </script>
 </head>
 <body class="bg-brand-bg text-brand-text font-sans antialiased">
+  <a href="#hero" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-brand-purple focus:text-white focus:text-sm">Skip to content</a>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- NAV -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-brand-bg/80 backdrop-blur-md border-b border-brand-border">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2 font-mono font-bold text-lg text-white">
-        <img src="/favicon.svg" alt="MCP DevKit" width="28" height="28" />
+      <a href="./" class="flex items-center gap-2 font-mono font-bold text-lg text-white">
+        <img src="./favicon.svg" alt="MCP DevKit" width="28" height="28" />
         MCP DevKit
       </a>
       <div class="hidden sm:flex items-center gap-6 text-sm text-brand-text-dim">
@@ -136,7 +137,19 @@
         <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
         <a href="https://github.com/mcp-devkit/mcp-devkit" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
       </div>
-      <a href="#waitlist" class="sm:hidden text-sm font-medium text-brand-purple hover:text-brand-purple-light transition-colors">Join Waitlist</a>
+      <button id="mobile-menu-btn" aria-label="Open menu" class="sm:hidden p-2 -mr-2 text-brand-text-dim hover:text-white transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden sm:hidden border-t border-brand-border bg-brand-bg/95 backdrop-blur-md">
+      <div class="flex flex-col gap-1 px-4 py-3 text-sm">
+        <a href="#features" class="py-2 text-brand-text-dim hover:text-white transition-colors mobile-link">Features</a>
+        <a href="#how-it-works" class="py-2 text-brand-text-dim hover:text-white transition-colors mobile-link">How It Works</a>
+        <a href="#compare" class="py-2 text-brand-text-dim hover:text-white transition-colors mobile-link">Compare</a>
+        <a href="#faq" class="py-2 text-brand-text-dim hover:text-white transition-colors mobile-link">FAQ</a>
+        <a href="https://github.com/mcp-devkit/mcp-devkit" target="_blank" rel="noopener noreferrer" class="py-2 text-brand-text-dim hover:text-white transition-colors">GitHub</a>
+        <a href="#waitlist" class="mt-1 py-2.5 rounded-lg bg-brand-purple text-white text-center font-medium mobile-link">Join Waitlist</a>
+      </div>
     </div>
   </nav>
 
@@ -205,7 +218,7 @@
             <span class="w-3 h-3 rounded-full bg-brand-green/80"></span>
             <span class="ml-2 text-xs text-brand-text-dim font-mono">~/my-mcp-server</span>
           </div>
-          <div class="p-5 font-mono text-sm leading-relaxed text-left overflow-x-auto">
+          <div id="hero-terminal" class="p-5 font-mono text-sm leading-relaxed text-left overflow-x-auto">
             <div class="text-brand-text-dim">$ <span class="text-white">npx mcp-devkit test</span></div>
             <div class="mt-3 text-brand-text-dim">
               <span class="text-brand-purple-light">MCP DevKit</span> v0.1.0
@@ -737,7 +750,7 @@
   <footer class="py-12 px-4 sm:px-6 border-t border-brand-border">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-2 font-mono text-sm text-brand-text-dim">
-        <img src="/favicon.svg" alt="" width="20" height="20" />
+        <img src="./favicon.svg" alt="" width="20" height="20" />
         &copy; 2026 MCP DevKit &middot; MIT License
       </div>
       <div class="flex items-center gap-6 text-sm text-brand-text-dim">
@@ -750,5 +763,51 @@
     </div>
   </footer>
 
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      const open = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      btn.innerHTML = open
+        ? '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>'
+        : '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>';
+    });
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-link').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-label', 'Open menu');
+        btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>';
+      });
+    });
+
+    // Terminal typing animation (hero section)
+    const terminal = document.getElementById('hero-terminal');
+    if (terminal) {
+      const lines = terminal.children;
+      for (let i = 0; i < lines.length; i++) {
+        lines[i].style.opacity = '0';
+        lines[i].style.transform = 'translateY(4px)';
+        lines[i].style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            Array.from(lines).forEach((line, i) => {
+              setTimeout(() => {
+                line.style.opacity = '1';
+                line.style.transform = 'translateY(0)';
+              }, i * 120);
+            });
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(terminal);
+    }
+  </script>
 </body>
 </html>
