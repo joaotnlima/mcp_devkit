@@ -1,0 +1,13 @@
+{
+  "name": "@mcp-devkit/website",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --minify && cp public/* dist/ && cp src/index.html src/thank-you.html src/404.html dist/"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

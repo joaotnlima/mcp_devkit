@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A0F"/>
+      <stop offset="100%" style="stop-color:#12121A"/>
+    </linearGradient>
+    <linearGradient id="purple-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6C5CE7;stop-opacity:0.3"/>
+      <stop offset="50%" style="stop-color:#6C5CE7;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#6C5CE7;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.05" stroke="#6C5CE7" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="630"/><line x1="60" y1="0" x2="60" y2="630"/>
+    <line x1="120" y1="0" x2="120" y2="630"/><line x1="180" y1="0" x2="180" y2="630"/>
+    <line x1="240" y1="0" x2="240" y2="630"/><line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="360" y1="0" x2="360" y2="630"/><line x1="420" y1="0" x2="420" y2="630"/>
+    <line x1="480" y1="0" x2="480" y2="630"/><line x1="540" y1="0" x2="540" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/><line x1="660" y1="0" x2="660" y2="630"/>
+    <line x1="720" y1="0" x2="720" y2="630"/><line x1="780" y1="0" x2="780" y2="630"/>
+    <line x1="840" y1="0" x2="840" y2="630"/><line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="960" y1="0" x2="960" y2="630"/><line x1="1020" y1="0" x2="1020" y2="630"/>
+    <line x1="1080" y1="0" x2="1080" y2="630"/><line x1="1140" y1="0" x2="1140" y2="630"/>
+    <line x1="0" y1="60" x2="1200" y2="60"/><line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/><line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/><line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+  </g>
+
+  <!-- Glow effect behind logo area -->
+  <circle cx="600" cy="200" r="200" fill="#6C5CE7" opacity="0.06"/>
+
+  <!-- Logo icon -->
+  <rect x="555" y="100" width="90" height="90" rx="18" fill="#0A0A0F" stroke="#2A2A3A" stroke-width="2"/>
+  <text x="568" y="157" font-family="monospace" font-weight="bold" font-size="36" fill="#6C5CE7">&gt;_</text>
+  <circle cx="630" cy="120" r="12" fill="#55EFC4" opacity="0.8"/>
+
+  <!-- Title -->
+  <text x="600" y="250" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="52" fill="#FFFFFF" letter-spacing="-1">MCP DevKit</text>
+
+  <!-- Tagline -->
+  <text x="600" y="310" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="28" fill="#E0E0E8">Test, Debug &amp; Monitor Your MCP Servers</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="360" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="20" fill="#8888A0">The open-source developer toolkit for the Model Context Protocol</text>
+
+  <!-- Terminal snippet -->
+  <rect x="300" y="400" width="600" height="140" rx="12" fill="#16161F" stroke="#2A2A3A" stroke-width="1"/>
+  <!-- Terminal dots -->
+  <circle cx="325" cy="420" r="5" fill="#FF7675" opacity="0.8"/>
+  <circle cx="342" cy="420" r="5" fill="#FDCB6E" opacity="0.8"/>
+  <circle cx="359" cy="420" r="5" fill="#55EFC4" opacity="0.8"/>
+  <!-- Terminal text -->
+  <text x="325" y="460" font-family="monospace" font-size="15" fill="#8888A0">$ <tspan fill="#FFFFFF">npx mcp-devkit test</tspan></text>
+  <text x="325" y="485" font-family="monospace" font-size="14" fill="#55EFC4">  PASS</text>
+  <text x="395" y="485" font-family="monospace" font-size="14" fill="#E0E0E8">tools/get_weather returns forecast</text>
+  <text x="325" y="505" font-family="monospace" font-size="14" fill="#55EFC4">  PASS</text>
+  <text x="395" y="505" font-family="monospace" font-size="14" fill="#E0E0E8">resources/cities lists available cities</text>
+  <text x="325" y="525" font-family="monospace" font-size="14" fill="#FF7675">  FAIL</text>
+  <text x="395" y="525" font-family="monospace" font-size="14" fill="#E0E0E8">tools/get_forecast returns 7-day data</text>
+
+  <!-- Bottom border accent -->
+  <rect x="0" y="625" width="1200" height="5" fill="#6C5CE7" opacity="0.6"/>
+</svg>
