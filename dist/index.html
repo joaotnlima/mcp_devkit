@@ -26,6 +26,15 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.svg" />
   <link rel="stylesheet" href="./style.css" />
 
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vx8k96p2ee");
+  </script>
+
   <!-- JSON-LD: SoftwareApplication -->
   <script type="application/ld+json">
   {
@@ -137,7 +146,7 @@
         <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
         <a href="https://github.com/mcp-devkit/mcp-devkit" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
       </div>
-      <button id="mobile-menu-btn" aria-label="Open menu" class="sm:hidden p-2 -mr-2 text-brand-text-dim hover:text-white transition-colors">
+      <button id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="sm:hidden p-2 -mr-2 text-brand-text-dim hover:text-white transition-colors">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
       </button>
     </div>
@@ -148,7 +157,7 @@
         <a href="#compare" class="py-2 text-brand-text-dim hover:text-white transition-colors mobile-link">Compare</a>
         <a href="#faq" class="py-2 text-brand-text-dim hover:text-white transition-colors mobile-link">FAQ</a>
         <a href="https://github.com/mcp-devkit/mcp-devkit" target="_blank" rel="noopener noreferrer" class="py-2 text-brand-text-dim hover:text-white transition-colors">GitHub</a>
-        <a href="#waitlist" class="mt-1 py-2.5 rounded-lg bg-brand-purple text-white text-center font-medium mobile-link">Join Waitlist</a>
+        <a href="#waitlist" class="mt-1 py-2.5 rounded-lg bg-white text-gray-900 text-center font-bold mobile-link">Join Waitlist</a>
       </div>
     </div>
   </nav>
@@ -167,8 +176,8 @@
       </p>
 
       <!-- Waitlist Form -->
-      <form id="waitlist" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="mt-10 max-w-lg mx-auto space-y-3">
-        <input type="hidden" name="_next" value="https://mcpdevkit.dev/thank-you.html" />
+      <form id="waitlist" action="https://formspree.io/f/xzdjkgyp" method="POST" class="mt-10 max-w-lg mx-auto space-y-3">
+        <input type="hidden" name="_next" value="./thank-you.html" />
         <div class="flex flex-col sm:flex-row gap-3">
           <label for="email" class="sr-only">Email address</label>
           <input
@@ -177,9 +186,9 @@
             name="email"
             required
             placeholder="you@example.com"
-            class="flex-1 px-4 py-3 rounded-lg bg-brand-bg-light border border-brand-border text-white placeholder-brand-text-dim focus:outline-none focus:ring-2 focus:ring-brand-purple focus:border-transparent text-sm"
+            class="flex-1 px-4 py-3 rounded-lg bg-brand-bg-light border border-[#3a3a50] text-white placeholder-brand-text-dim focus:outline-none focus:ring-2 focus:ring-brand-purple focus:border-transparent text-sm"
           />
-          <button type="submit" class="px-6 py-3 rounded-lg bg-brand-purple hover:bg-brand-purple-light text-white font-semibold text-sm transition-colors whitespace-nowrap cursor-pointer">
+          <button type="submit" class="px-6 py-3 rounded-lg bg-white hover:bg-gray-100 text-gray-900 font-bold text-sm transition-all whitespace-nowrap cursor-pointer hover:scale-[1.02] shadow-lg shadow-white/10">
             Join the Waitlist
           </button>
         </div>
@@ -193,6 +202,17 @@
           </div>
         </details>
       </form>
+
+      <p class="mt-4 text-[0.85rem] text-[#8888aa] text-center">Be among the first to test the future of MCP tooling</p>
+
+      <div class="mt-4 flex items-center justify-center gap-4">
+        <a href="https://github.com/mcp-devkit/mcp-devkit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-brand-border hover:border-brand-purple text-white text-sm font-medium transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.509 11.509 0 013.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          Star on GitHub
+        </a>
+      </div>
+
+      <p class="mt-3 text-xs text-brand-text-dim text-center">Free &amp; open source &middot; MIT License</p>
 
       <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-brand-text-dim">
         <span class="flex items-center gap-1.5">
@@ -210,15 +230,15 @@
       </div>
 
       <!-- Terminal Demo -->
-      <div class="mt-14 max-w-2xl mx-auto">
-        <div class="rounded-xl border border-brand-border bg-brand-bg-light overflow-hidden shadow-2xl shadow-brand-purple/5">
-          <div class="flex items-center gap-2 px-4 py-3 border-b border-brand-border">
+      <div class="mt-14 max-w-3xl mx-auto">
+        <div class="rounded-xl border border-brand-border bg-[#13131f] overflow-hidden shadow-2xl shadow-brand-purple/10">
+          <div class="flex items-center gap-2 px-4 py-3 border-b border-brand-border bg-brand-bg-light">
             <span class="w-3 h-3 rounded-full bg-brand-coral/80"></span>
             <span class="w-3 h-3 rounded-full bg-brand-amber/80"></span>
             <span class="w-3 h-3 rounded-full bg-brand-green/80"></span>
             <span class="ml-2 text-xs text-brand-text-dim font-mono">~/my-mcp-server</span>
           </div>
-          <div id="hero-terminal" class="p-5 font-mono text-sm leading-relaxed text-left overflow-x-auto">
+          <div id="hero-terminal" class="p-6 font-mono text-[14px] leading-relaxed text-left overflow-x-auto">
             <div class="text-brand-text-dim">$ <span class="text-white">npx mcp-devkit test</span></div>
             <div class="mt-3 text-brand-text-dim">
               <span class="text-brand-purple-light">MCP DevKit</span> v0.1.0
@@ -251,43 +271,43 @@
       </h2>
       <div class="mt-14 grid sm:grid-cols-2 gap-6">
         <!-- Pain 1 -->
-        <div class="p-6 rounded-xl bg-brand-bg-card border border-brand-border">
+        <div class="p-6 rounded-xl bg-brand-bg-card border border-brand-border border-l-[3px] border-l-brand-coral">
           <div class="w-10 h-10 rounded-lg bg-brand-coral/10 flex items-center justify-center mb-4">
             <svg class="w-5 h-5 text-brand-coral" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="font-semibold text-white text-lg">No testing framework</h3>
           <p class="mt-2 text-brand-text-dim text-sm leading-relaxed">
-            You're testing MCP servers by... manually calling tools and eyeballing JSON? In 2026?
+            You're testing MCP servers by manually calling tools and eyeballing JSON responses. No assertions. No CI integration. Every deploy is a prayer. In 2026, this is embarrassing.
           </p>
         </div>
         <!-- Pain 2 -->
-        <div class="p-6 rounded-xl bg-brand-bg-card border border-brand-border">
+        <div class="p-6 rounded-xl bg-brand-bg-card border border-brand-border border-l-[3px] border-l-brand-amber">
           <div class="w-10 h-10 rounded-lg bg-brand-amber/10 flex items-center justify-center mb-4">
             <svg class="w-5 h-5 text-brand-amber" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="font-semibold text-white text-lg">Debugging black holes</h3>
           <p class="mt-2 text-brand-text-dim text-sm leading-relaxed">
-            When your agent fails, you have no idea if it's the prompt, the MCP server, or the tool. Zero traces. Zero visibility.
+            Your agent fails. Was it the prompt? The MCP server? The tool? You have zero traces, zero visibility. You're adding console.log to a protocol layer and hoping for the best.
           </p>
         </div>
         <!-- Pain 3 -->
-        <div class="p-6 rounded-xl bg-brand-bg-card border border-brand-border">
+        <div class="p-6 rounded-xl bg-brand-bg-card border border-brand-border border-l-[3px] border-l-brand-purple">
           <div class="w-10 h-10 rounded-lg bg-brand-purple/10 flex items-center justify-center mb-4">
             <svg class="w-5 h-5 text-brand-purple" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93s.844.083 1.18-.167l.713-.57a1.125 1.125 0 011.536.145l.773.773a1.125 1.125 0 01.145 1.536l-.57.713c-.25.336-.3.786-.167 1.18s.506.71.93.78l.894.15c.542.09.94.56.94 1.109v1.094c0 .55-.398 1.02-.94 1.11l-.894.149c-.424.07-.764.384-.93.78s-.083.844.167 1.18l.57.713a1.125 1.125 0 01-.145 1.536l-.773.773a1.125 1.125 0 01-1.536.145l-.713-.57c-.336-.25-.786-.3-1.18-.167s-.71.506-.78.93l-.15.894c-.09.542-.56.94-1.109.94h-1.094c-.55 0-1.02-.398-1.11-.94l-.149-.894c-.07-.424-.384-.764-.78-.93s-.844-.083-1.18.167l-.713.57a1.125 1.125 0 01-1.536-.145l-.773-.773a1.125 1.125 0 01-.145-1.536l.57-.713c.25-.336.3-.786.167-1.18s-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.764-.384.93-.78s.083-.844-.167-1.18l-.57-.713a1.125 1.125 0 01.145-1.536l.773-.773a1.125 1.125 0 011.536-.145l.713.57c.336.25.786.3 1.18.167s.71-.506.78-.93l.15-.894z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
           <h3 class="font-semibold text-white text-lg">Config chaos</h3>
           <p class="mt-2 text-brand-text-dim text-sm leading-relaxed">
-            Hand-editing JSON configs with silent errors. One typo = hours of debugging.
+            Hand-editing JSON configs with zero validation. One missing comma, one wrong transport type &mdash; silent failures that eat hours of your life. No autocomplete, no error messages, just pain.
           </p>
         </div>
         <!-- Pain 4 -->
-        <div class="p-6 rounded-xl bg-brand-bg-card border border-brand-border">
+        <div class="p-6 rounded-xl bg-brand-bg-card border border-brand-border border-l-[3px] border-l-brand-green">
           <div class="w-10 h-10 rounded-lg bg-brand-green/10 flex items-center justify-center mb-4">
             <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12c1.292 4.338 5.31 7.5 10.066 7.5.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88"/></svg>
           </div>
           <h3 class="font-semibold text-white text-lg">Production blind spots</h3>
           <p class="mt-2 text-brand-text-dim text-sm leading-relaxed">
-            Your MCP server is live. You have no latency metrics, no error rates, no alerts. You find out it's broken when users complain.
+            Your MCP server handles 10K requests/day. You have no latency metrics, no error rates, no alerts. You discover it's broken when a user files an angry GitHub issue at 2 AM.
           </p>
         </div>
       </div>
@@ -315,11 +335,11 @@
             Write declarative tests in <code class="text-brand-green bg-brand-green/10 px-1.5 py-0.5 rounded text-sm">.mcptest</code> files. Run them locally or in CI. Get instant feedback with rich terminal output. Like Jest, but for MCP server testing.
           </p>
         </div>
-        <div class="rounded-xl border border-brand-border bg-brand-bg-light overflow-hidden">
-          <div class="flex items-center gap-2 px-4 py-2.5 border-b border-brand-border">
+        <div class="rounded-xl border border-brand-border bg-[#13131f] overflow-hidden">
+          <div class="flex items-center gap-2 px-4 py-2.5 border-b border-brand-border bg-brand-bg-light">
             <span class="text-xs text-brand-text-dim font-mono">weather.mcptest</span>
           </div>
-          <pre class="p-4 font-mono text-sm leading-relaxed overflow-x-auto"><code><span class="text-brand-purple-light">server</span> <span class="text-brand-amber">"weather-server"</span> {
+          <pre class="p-5 font-mono text-[13px] leading-relaxed overflow-x-auto"><code><span class="text-brand-purple-light">server</span> <span class="text-brand-amber">"weather-server"</span> {
   <span class="text-brand-text-dim">transport:</span> <span class="text-brand-amber">"stdio"</span>
   <span class="text-brand-text-dim">command:</span>  <span class="text-brand-amber">"node server.js"</span>
 }
@@ -350,11 +370,11 @@
             Capture and visualize every request between your agent and MCP server. Filter by tool, status, or latency. Replay requests. Find bugs in minutes, not hours. A real MCP inspector alternative with superpowers.
           </p>
         </div>
-        <div class="lg:order-1 rounded-xl border border-brand-border bg-brand-bg-light overflow-hidden">
-          <div class="flex items-center gap-2 px-4 py-2.5 border-b border-brand-border">
-            <span class="text-xs text-brand-text-dim font-mono">mcp-devkit inspect</span>
+        <div class="lg:order-1 rounded-xl border border-brand-border bg-[#13131f] overflow-hidden">
+          <div class="flex items-center gap-2 px-4 py-2.5 border-b border-brand-border bg-brand-bg-light">
+            <span class="text-xs text-brand-text-dim font-mono">$ mcp-devkit inspect</span>
           </div>
-          <div class="p-4 font-mono text-xs leading-relaxed overflow-x-auto">
+          <div class="p-5 font-mono text-[13px] leading-relaxed overflow-x-auto">
             <div class="text-brand-text-dim">Capturing traffic on <span class="text-white">localhost:3000</span>...</div>
             <div class="mt-3 space-y-2">
               <div class="flex gap-3">
@@ -416,11 +436,11 @@
             Validate your MCP server configs and tool definitions against the spec. Get actionable error messages with suggested fixes. Stop debugging typos in your MCP server schema.
           </p>
         </div>
-        <div class="rounded-xl border border-brand-border bg-brand-bg-light overflow-hidden">
-          <div class="flex items-center gap-2 px-4 py-2.5 border-b border-brand-border">
-            <span class="text-xs text-brand-text-dim font-mono">mcp-devkit validate</span>
+        <div class="rounded-xl border border-brand-border bg-[#13131f] overflow-hidden">
+          <div class="flex items-center gap-2 px-4 py-2.5 border-b border-brand-border bg-brand-bg-light">
+            <span class="text-xs text-brand-text-dim font-mono">$ mcp-devkit validate</span>
           </div>
-          <div class="p-4 font-mono text-xs leading-relaxed overflow-x-auto">
+          <div class="p-5 font-mono text-[13px] leading-relaxed overflow-x-auto">
             <div class="text-brand-text-dim">$ <span class="text-white">npx mcp-devkit validate ./mcp.json</span></div>
             <div class="mt-3 space-y-3">
               <div>
@@ -498,10 +518,10 @@
       </p>
       <div class="mt-14 grid sm:grid-cols-3 gap-6 text-left">
         <!-- Card 1 -->
-        <div class="p-6 rounded-xl bg-brand-bg-card border border-brand-border relative overflow-hidden">
+        <div class="p-6 rounded-xl bg-[#12121f] border border-brand-border border-t-[3px] border-t-brand-purple relative overflow-hidden">
           <div class="absolute top-3 right-3 px-2 py-0.5 rounded text-[10px] font-medium bg-brand-purple/20 text-brand-purple-light">Coming Soon</div>
           <div class="w-10 h-10 rounded-lg bg-brand-amber/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-brand-amber" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+            <svg class="w-8 h-8 text-brand-amber" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
           </div>
           <h3 class="font-semibold text-white">Production Monitoring</h3>
           <p class="mt-2 text-brand-text-dim text-sm leading-relaxed">
@@ -509,10 +529,10 @@
           </p>
         </div>
         <!-- Card 2 -->
-        <div class="p-6 rounded-xl bg-brand-bg-card border border-brand-border relative overflow-hidden">
+        <div class="p-6 rounded-xl bg-[#12121f] border border-brand-border border-t-[3px] border-t-brand-green relative overflow-hidden">
           <div class="absolute top-3 right-3 px-2 py-0.5 rounded text-[10px] font-medium bg-brand-purple/20 text-brand-purple-light">Coming Soon</div>
           <div class="w-10 h-10 rounded-lg bg-brand-green/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
+            <svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
           </div>
           <h3 class="font-semibold text-white">MCP Registry</h3>
           <p class="mt-2 text-brand-text-dim text-sm leading-relaxed">
@@ -520,10 +540,10 @@
           </p>
         </div>
         <!-- Card 3 -->
-        <div class="p-6 rounded-xl bg-brand-bg-card border border-brand-border relative overflow-hidden">
+        <div class="p-6 rounded-xl bg-[#12121f] border border-brand-border border-t-[3px] border-t-brand-amber relative overflow-hidden">
           <div class="absolute top-3 right-3 px-2 py-0.5 rounded text-[10px] font-medium bg-brand-purple/20 text-brand-purple-light">Coming Soon</div>
           <div class="w-10 h-10 rounded-lg bg-brand-purple/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-brand-purple-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
+            <svg class="w-8 h-8 text-brand-purple-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
           </div>
           <h3 class="font-semibold text-white">Data Intelligence</h3>
           <p class="mt-2 text-brand-text-dim text-sm leading-relaxed">
@@ -532,7 +552,7 @@
         </div>
       </div>
       <div class="mt-10">
-        <a href="#waitlist" class="inline-flex px-6 py-3 rounded-lg bg-brand-purple hover:bg-brand-purple-light text-white font-semibold text-sm transition-colors">
+        <a href="#waitlist" class="inline-flex px-6 py-3 rounded-lg bg-white hover:bg-gray-100 text-gray-900 font-bold text-sm transition-all hover:scale-[1.02] shadow-lg shadow-white/10">
           Get Early Access
         </a>
       </div>
@@ -550,7 +570,7 @@
       <p class="mt-4 text-brand-text-dim text-center max-w-xl mx-auto">
         MCP Inspector is great for quick debugging. MCP DevKit is for teams that ship to production.
       </p>
-      <div class="mt-14 overflow-x-auto">
+      <div class="mt-14 overflow-x-auto relative">
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b border-brand-border">
@@ -562,51 +582,51 @@
             </tr>
           </thead>
           <tbody class="text-center">
-            <tr class="border-b border-brand-border/50">
-              <td class="text-left py-3 px-4 text-brand-text">MCP Test Runner</td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-text-dim" aria-label="No">&#10005;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-text-dim" aria-label="No">&#10005;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-text-dim" aria-label="No">&#10005;</span></td>
+            <tr class="border-b border-brand-border/50 bg-brand-purple/[0.06] border-l-2 border-l-brand-purple">
+              <td class="text-left py-3 px-4 text-white font-medium">MCP Test Runner</td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
+              <td class="py-3 px-4"><span class="text-[#FF7675] text-[1.1rem]" aria-label="No">&#10005;</span></td>
+              <td class="py-3 px-4"><span class="text-[#FF7675] text-[1.1rem]" aria-label="No">&#10005;</span></td>
+              <td class="py-3 px-4"><span class="text-[#FF7675] text-[1.1rem]" aria-label="No">&#10005;</span></td>
             </tr>
-            <tr class="border-b border-brand-border/50">
-              <td class="text-left py-3 px-4 text-brand-text">Request Inspector</td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
+            <tr class="border-b border-brand-border/50 bg-brand-purple/[0.06] border-l-2 border-l-brand-purple">
+              <td class="text-left py-3 px-4 text-white font-medium">Request Inspector</td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
             </tr>
-            <tr class="border-b border-brand-border/50">
-              <td class="text-left py-3 px-4 text-brand-text">Schema Validation</td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-text-dim" aria-label="No">&#10005;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-text-dim" aria-label="No">&#10005;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
+            <tr class="border-b border-brand-border/50 bg-brand-purple/[0.06] border-l-2 border-l-brand-purple">
+              <td class="text-left py-3 px-4 text-white font-medium">Schema Validation</td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
+              <td class="py-3 px-4"><span class="text-[#FF7675] text-[1.1rem]" aria-label="No">&#10005;</span></td>
+              <td class="py-3 px-4"><span class="text-[#FF7675] text-[1.1rem]" aria-label="No">&#10005;</span></td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
             </tr>
-            <tr class="border-b border-brand-border/50">
-              <td class="text-left py-3 px-4 text-brand-text">Prod Monitoring</td>
-              <td class="py-3 px-4"><span class="text-brand-amber" aria-label="Coming soon">Soon</span></td>
-              <td class="py-3 px-4"><span class="text-brand-text-dim" aria-label="No">&#10005;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
+            <tr class="border-b border-brand-border/50 bg-brand-purple/[0.06] border-l-2 border-l-brand-purple">
+              <td class="text-left py-3 px-4 text-white font-medium">Prod Monitoring</td>
+              <td class="py-3 px-4"><span class="text-[#FDCB6E] text-[1.1rem]" aria-label="Coming soon">Soon</span></td>
+              <td class="py-3 px-4"><span class="text-[#FF7675] text-[1.1rem]" aria-label="No">&#10005;</span></td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
             </tr>
-            <tr class="border-b border-brand-border/50">
-              <td class="text-left py-3 px-4 text-brand-text">MCP-Native</td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-text-dim" aria-label="No">&#10005;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-text-dim" aria-label="No">&#10005;</span></td>
+            <tr class="border-b border-brand-border/50 bg-brand-purple/[0.06] border-l-2 border-l-brand-purple">
+              <td class="text-left py-3 px-4 text-white font-medium">MCP-Native</td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
+              <td class="py-3 px-4"><span class="text-[#FF7675] text-[1.1rem]" aria-label="No">&#10005;</span></td>
+              <td class="py-3 px-4"><span class="text-[#FF7675] text-[1.1rem]" aria-label="No">&#10005;</span></td>
             </tr>
-            <tr class="border-b border-brand-border/50">
-              <td class="text-left py-3 px-4 text-brand-text">Open Source CLI</td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-green" aria-label="Yes">&#10003;</span></td>
-              <td class="py-3 px-4"><span class="text-brand-text-dim" aria-label="No">&#10005;</span></td>
+            <tr class="border-b border-brand-border/50 bg-brand-purple/[0.06] border-l-2 border-l-brand-purple">
+              <td class="text-left py-3 px-4 text-white font-medium">Open Source CLI</td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
+              <td class="py-3 px-4"><span class="text-[#55EFC4] text-[1.1rem]" aria-label="Yes">&#10003;</span></td>
+              <td class="py-3 px-4"><span class="text-[#FF7675] text-[1.1rem]" aria-label="No">&#10005;</span></td>
             </tr>
-            <tr>
-              <td class="text-left py-3 px-4 text-brand-text">Price</td>
-              <td class="py-3 px-4 text-brand-green font-medium">Free</td>
+            <tr class="bg-brand-purple/[0.06] border-l-2 border-l-brand-purple">
+              <td class="text-left py-3 px-4 text-white font-medium">Price</td>
+              <td class="py-3 px-4 text-[#55EFC4] font-bold">Free</td>
               <td class="py-3 px-4 text-brand-text-dim">Free</td>
               <td class="py-3 px-4 text-brand-text-dim">Freemium</td>
               <td class="py-3 px-4 text-brand-text-dim">Freemium</td>
@@ -720,8 +740,8 @@
       <p class="mt-4 text-brand-text-dim text-lg">
         Join the waitlist. Be among the first to test the future of MCP tooling.
       </p>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="mt-8 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-        <input type="hidden" name="_next" value="https://mcpdevkit.dev/thank-you.html" />
+      <form action="https://formspree.io/f/xzdjkgyp" method="POST" class="mt-8 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+        <input type="hidden" name="_next" value="./thank-you.html" />
         <label for="email-bottom" class="sr-only">Email address</label>
         <input
           id="email-bottom"
@@ -729,9 +749,9 @@
           name="email"
           required
           placeholder="you@example.com"
-          class="flex-1 px-4 py-3 rounded-lg bg-brand-bg-light border border-brand-border text-white placeholder-brand-text-dim focus:outline-none focus:ring-2 focus:ring-brand-purple focus:border-transparent text-sm"
+          class="flex-1 px-4 py-3 rounded-lg bg-brand-bg-light border border-[#3a3a50] text-white placeholder-brand-text-dim focus:outline-none focus:ring-2 focus:ring-brand-purple focus:border-transparent text-sm"
         />
-        <button type="submit" class="px-6 py-3 rounded-lg bg-brand-purple hover:bg-brand-purple-light text-white font-semibold text-sm transition-colors whitespace-nowrap cursor-pointer">
+        <button type="submit" class="px-6 py-3 rounded-lg bg-white hover:bg-gray-100 text-gray-900 font-bold text-sm transition-all whitespace-nowrap cursor-pointer hover:scale-[1.02] shadow-lg shadow-white/10">
           Join the Waitlist
         </button>
       </form>
@@ -755,8 +775,8 @@
       </div>
       <div class="flex items-center gap-6 text-sm text-brand-text-dim">
         <a href="https://github.com/mcp-devkit/mcp-devkit" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
-        <a href="/docs" class="hover:text-white transition-colors">Docs</a>
-        <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+        <a href="./docs" class="hover:text-white transition-colors">Docs</a>
+        <a href="./blog" class="hover:text-white transition-colors">Blog</a>
         <a href="https://discord.gg/mcpdevkit" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Discord</a>
         <a href="https://x.com/mcpdevkit" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Twitter/X</a>
       </div>
@@ -771,6 +791,7 @@
       const open = !menu.classList.contains('hidden');
       menu.classList.toggle('hidden');
       btn.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      btn.setAttribute('aria-expanded', String(!open));
       btn.innerHTML = open
         ? '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>'
         : '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>';
@@ -780,13 +801,14 @@
       a.addEventListener('click', () => {
         menu.classList.add('hidden');
         btn.setAttribute('aria-label', 'Open menu');
+        btn.setAttribute('aria-expanded', 'false');
         btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>';
       });
     });
 
-    // Terminal typing animation (hero section)
+    // Terminal typing animation (hero section) — respects prefers-reduced-motion
     const terminal = document.getElementById('hero-terminal');
-    if (terminal) {
+    if (terminal && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       const lines = terminal.children;
       for (let i = 0; i < lines.length; i++) {
         lines[i].style.opacity = '0';
